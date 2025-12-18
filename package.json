@@ -18,6 +18,7 @@
     "build": "pnpm run build:ts && pnpm run build:css",
     "build:ts": "tsc -p tsconfig.build.json",
     "build:css": "node scripts/copy-css.mjs",
+    "screenshots": "node scripts/capture-screenshots.mjs",
     "prepack": "pnpm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "playwright": "^1.57.0",
     "typescript": "^5.9.3"
   }
 }
