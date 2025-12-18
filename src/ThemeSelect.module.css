@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  background-color: var(--surface);
+  color: var(--text);
+  overflow: hidden;
+}
+
+@media (width >= 700px) {
+  .content {
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+  align-content: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--background);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  background: var(--surface);
+}
+
+.selected {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in lab, var(--primary), transparent 75%);
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 140px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.previewHeader {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+.previewDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.previewTabs {
+  display: flex;
+  gap: 8px;
+  padding: 6px 8px;
+  align-items: center;
+}
+
+.previewTab {
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+.previewTabSelected {
+  font-weight: 600;
+}
+
+.previewBody {
+  flex: 1;
+  padding: 8px;
+  display: flex;
+}
+
+.previewPanel {
+  flex: 1;
+  border-radius: 6px;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+
+.previewText {
+  font-size: 12px;
+}
+
+.previewMuted {
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+.previewControls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.previewInput {
+  height: 16px;
+  border-radius: 4px;
+}
+
+.previewButton {
+  width: 36px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
