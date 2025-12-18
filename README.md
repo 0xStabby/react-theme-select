@@ -2,6 +2,8 @@
 
 Reusable React theme picker component.
 
+Jump to the [theme gallery](#theme-gallery).
+
 
 ## Install
 
